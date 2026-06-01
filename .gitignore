@@ -18,8 +18,8 @@ Thumbs.db
 .ipynb_checkpoints/
 
 # Output
-figures/*.png
-figures/*.pdf
+figures/
 
 # Cache
 scripts/__pycache__/
+.venv/

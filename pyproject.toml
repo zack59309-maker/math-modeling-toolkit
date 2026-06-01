@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "math-modeling-toolkit"
+version = "2.0.0"
+description = "数学建模竞赛工具箱 — 国赛/美赛六大题型，80+ 可复用函数"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Hermes Agent"},
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "matplotlib>=3.4.0",
+    "scikit-learn>=1.0.0",
+    "statsmodels>=0.13.0",
+]
+
+[project.optional-dependencies]
+full = [
+    "pulp>=2.0",
+    "cvxpy>=1.2",
+    "ortools>=9.4",
+    "prophet>=1.1",
+]
+
+[tool.setuptools.packages.find]
+include = ["scripts*"]
+
+[tool.setuptools.package-data]
+scripts = ["*.py"]

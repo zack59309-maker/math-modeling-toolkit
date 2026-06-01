@@ -20,3 +20,6 @@ Thumbs.db
 # Output
 figures/*.png
 figures/*.pdf
+
+# Cache
+scripts/__pycache__/

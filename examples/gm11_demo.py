@@ -3,8 +3,8 @@
 运行: python examples/gm11_demo.py
 """
 
-import sys
-sys.path.insert(0, '..')
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import numpy as np
 
@@ -93,7 +93,7 @@ fig = plot_comparison(
     labels=["实际值", "GM(1,1)", "残差修正 GM(1,1)"],
     title="灰色预测模型对比 (1980-2000 GDP)",
     ylabel="GDP（亿元）",
-    save_path="../figures/gm11_comparison.png"
+    save_path="figures/gm11_comparison.png"
 )
 print("\n  → 已保存: figures/gm11_comparison.png")
 

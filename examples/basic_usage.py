@@ -1,8 +1,8 @@
 # 数学建模竞赛工具箱 — 基本使用示例
 # 运行: python examples/basic_usage.py
 
-import sys
-sys.path.insert(0, '..')
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import numpy as np
 
@@ -93,7 +93,7 @@ fig = plot_line(
     labels=["sin(x)", "cos(x)"],
     title="sin 和 cos 曲线",
     xlabel="x", ylabel="y",
-    save_path="../figures/demo_line.png"
+    save_path="figures/demo_line.png"
 )
 
 fig = plot_bar(
@@ -101,7 +101,7 @@ fig = plot_bar(
     [85, 92, 78, 88],
     labels=["得分"],
     title="方案得分对比",
-    save_path="../figures/demo_bar.png"
+    save_path="figures/demo_bar.png"
 )
 print("  图表已保存: figures/demo_line.png, figures/demo_bar.png")
 

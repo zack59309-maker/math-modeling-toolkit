@@ -3,8 +3,8 @@
 运行: python examples/sensitivity_demo.py
 """
 
-import sys
-sys.path.insert(0, '..')
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import numpy as np
 
@@ -66,7 +66,7 @@ fig1 = plot_heatmap(
     xticklabels=[f"{x:.2f}" for x in X[0]],
     yticklabels=[f"{y:.2f}" for y in Y[:, 0]],
     title="双参数灵敏度热力图 (α × β)",
-    save_path="../figures/sensitivity_heatmap.png"
+    save_path="figures/sensitivity_heatmap.png"
 )
 print("  → 已保存: figures/sensitivity_heatmap.png")
 
@@ -74,7 +74,7 @@ fig2 = plot_3d_surface(
     X, Y, Z,
     title="双参数灵敏度 3D 曲面",
     xlabel="α (全要素生产率)", ylabel="β (资本弹性)", zlabel="GDP",
-    save_path="../figures/sensitivity_3d.png"
+    save_path="figures/sensitivity_3d.png"
 )
 print("  → 已保存: figures/sensitivity_3d.png")
 

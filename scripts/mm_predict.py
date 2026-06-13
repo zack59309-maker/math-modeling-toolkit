@@ -344,7 +344,7 @@ class SimpleBP:
         pred = bp.predict(X_test)
     """
 
-    def __init__(self, n_input: int, n_hidden: int = 10, n_output: int = 1):
+    def __init__(self, n_input: int, n_hidden: int = 10, n_output: int = 1) -> None:
         self.w1 = np.random.randn(n_input, n_hidden) * 0.1
         self.b1 = np.zeros((1, n_hidden))
         self.w2 = np.random.randn(n_hidden, n_output) * 0.1
